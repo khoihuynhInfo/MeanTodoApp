@@ -57,3 +57,7 @@ https://css-tricks.com/serviceworker-for-offline/
 - Build blog with strapi 
 
 https://strapi.io/blog/build-a-blog-with-next-react-js-strapi
+
+- Prevent css Caching
+
+https://css-tricks.com/can-we-prevent-css-caching/
