@@ -45,6 +45,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # refer
 
+- cache file with service worker
+
+https://developers.google.com/web/ilt/pwa/lab-caching-files-with-service-worker
+
+
+- service worker refer
+
+https://css-tricks.com/serviceworker-for-offline/
+
 - Build blog with strapi 
 
 https://strapi.io/blog/build-a-blog-with-next-react-js-strapi
