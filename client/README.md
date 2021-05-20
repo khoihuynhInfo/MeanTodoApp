@@ -25,3 +25,26 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Feature
+
+- theme (dark theme / light theme) 
+- animation Fadein when change theme
+- drag detete
+- drag order
+- Webwork handle example (
+    parse infomation
+)
+- service worker (
+    offline mode
+)
+- track offline show pop-up
+
+
+
+# refer
+
+- Build blog with strapi 
+
+https://strapi.io/blog/build-a-blog-with-next-react-js-strapi
