@@ -3,51 +3,63 @@
 </mat-toolbar>
 <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
 
-<section>
-  <mat-grid-list cols="2" rowHeight="2: 2">
-    <!-- List View -->
-    <mat-grid-tile>
-      <mat-tab-group>
-    
-        <mat-tab label="All Todo List"> 
-          <mat-selection-list #shoes>
-            <mat-list-option *ngFor="let shoe of typesOfShoes">
-              {{shoe}}
-            </mat-list-option>
-          </mat-selection-list>
-          <div>
-            <span matBadge="{{shoes.selectedOptions.selected.length}}" matBadgeOverlap="false">Text with a badge</span>
+<section class="center-content" style="margin: 20px 0;">
+  <mat-tab-group>
+    <mat-tab label="Control">
+      <div style="width: 100%; padding: 10px;">
+        <mat-slide-toggle>Show control!</mat-slide-toggle>
+      </div>
+    </mat-tab>
+    <mat-tab label="Pannel">
+      <div style="width: 100%; padding: 10px;">
+        <div cdkDropListGroup>
+          <div class="example-container">
+            <h2>To do</h2>
+            <div
+              cdkDropList
+              [cdkDropListData]="todo"
+              class="example-list"
+              (cdkDropListDropped)="drop($event)">
+              <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+            </div>
           </div>
+
+          <div class="example-container">
+            <h2>Done</h2>
+        
+            <div
+              cdkDropList
+              [cdkDropListData]="done"
+              class="example-list"
+              (cdkDropListDropped)="drop($event)">
+              <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+            </div>
+          </div>
+        </div>
+        <!-- control form -->
+        <form  width="50%" class="example-form">
+          <h3><b>Add Todo</b></h3>
+          <!-- <h3>Edit</h3> -->
+          <mat-form-field class="example-full-width">
+            <mat-label>todo name</mat-label>
+            <input matInput placeholder="Ex. do home work" value="">
+          </mat-form-field>
+        
+          <mat-form-field class="example-full-width">
+            <mat-label>description</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+          </mat-form-field>
+    
+          <button  class="example-full-width" mat-raised-button color="primary">Add</button>
+          <!-- <button class="example-full-width" mat-raised-button color="accent">Edit</button> -->
+        </form>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+    
   
-        </mat-tab>
-        <mat-tab label="Inprocess">  </mat-tab>
-        <mat-tab label="Completed"> Content 3 </mat-tab>
-      </mat-tab-group>
-    </mat-grid-tile>
-    <!-- Content -->
-    <mat-grid-tile>
-  
-      <form class="example-form">
-        <h3><b>Add Todo</b></h3>
-        <!-- <h3>Edit</h3> -->
-        <mat-form-field class="example-full-width">
-          <mat-label>todo name</mat-label>
-          <input matInput placeholder="Ex. do home work" value="">
-        </mat-form-field>
-      
-        <mat-form-field class="example-full-width">
-          <mat-label>description</mat-label>
-          <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-        </mat-form-field>
-  
-        <button  class="example-full-width" mat-raised-button color="primary">Add</button>
-        <!-- <button class="example-full-width" mat-raised-button color="accent">Edit</button> -->
-  
-      </form>
-  
-    </mat-grid-tile>
-  
-  </mat-grid-list> 
+
 </section>
 
 <mat-divider></mat-divider>
