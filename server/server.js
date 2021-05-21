@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
+require("./config/db");
 const app = express();
 
 const corsOptions = {
@@ -21,3 +21,10 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)
 });
+
+
+// ======================================================
+
+const routers = require('./routes/todoRoutes');
+
+routers(app);
