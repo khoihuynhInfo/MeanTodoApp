@@ -1,4 +1,6 @@
-export const CONSTANT = {
-    USERNAME: 'abc',
-    PASSWORD: 'abc'
+const CONSTANT = {
+	USERNAME: 'khoihuynh',
+	PASSWORD: 'luthinho123'
 }
+
+module.exports = CONSTANT;
