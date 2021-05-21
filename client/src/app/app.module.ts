@@ -1,19 +1,10 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatListModule} from '@angular/material/list';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatCardModule} from '@angular/material/card';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MaterrialModule } from './module/material.module';
 
 @NgModule({
   declarations: [
@@ -22,17 +13,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatProgressBarModule,
-    MatToolbarModule,
-    MatGridListModule,
-    MatTabsModule,
-    MatListModule,
-    MatButtonModule,
-    MatInputModule,
-    MatBadgeModule,
-    MatSlideToggleModule,
-    MatCardModule,
-    DragDropModule,
+    HttpClientModule,
+    MaterrialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

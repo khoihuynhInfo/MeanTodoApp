@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { 
+  Component, 
+  OnInit,
+} from '@angular/core';
 
 import {
   CdkDragDrop, 
@@ -11,10 +14,8 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'my-app';
-
-  typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
+export class AppComponent implements OnInit {
+  readonly title = 'my-app';
 
   todo = [
     'Get to work',
@@ -31,15 +32,27 @@ export class AppComponent {
     'Walk dog'
   ];
 
+  constructor() {}
+
+  ngOnInit() {
+
+  }
+
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+      moveItemInArray(
+        event.container.data, 
+        event.previousIndex, 
+        event.currentIndex,
+      );
     } else {
-      transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
     }
+  }
 
-}
 }
